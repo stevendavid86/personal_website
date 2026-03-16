@@ -1,0 +1,52 @@
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: black;
+    text-align: right;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    margin: 40px;
+}
+
+/* link styles */
+
+nav a {
+    text-decoration: none;
+    color:slategrey;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
+nav a::hover {
+    color: #007BFF;
+}
+
+nav a::after{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #007BFF;
+    transition: width 0.3s;    
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    color: #007BFF;
+}
+
+nave a.active::after {
+    width: 100%;
+}
