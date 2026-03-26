@@ -104,16 +104,18 @@ nav a.active::after {
 
 /* projects */
 .bubbles-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 .project-bubble {
+    justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     width: 200px;
     height: 140px;
     text-decoration: none;
@@ -121,4 +123,64 @@ nav a.active::after {
     border-radius: 20%;
     color: #333;
     padding: 15px;
+    position: relative;
+}
+
+.project-bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.bubble-title {
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.bubble-description {
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px;
+}
+
+.code-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20%;
+}
+
+/* contact */
+.contact-section {
+    margin: 40px;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid white;
+    cursor: pointer;
 }
